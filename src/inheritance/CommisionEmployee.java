@@ -1,5 +1,6 @@
+package inheritance;
 
-package cs5800.homework4;
+
 
 public class CommisionEmployee extends Employee {
     private double commissionRate;

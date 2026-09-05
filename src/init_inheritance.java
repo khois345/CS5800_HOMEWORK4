@@ -1,5 +1,8 @@
-
-package cs5800.homework4;
+import inheritance.BaseEmployee;
+import inheritance.CommisionEmployee;
+import inheritance.Employee;
+import inheritance.HourlyEmployee;
+import inheritance.SalariedEmployee;
 
 public class init_inheritance {
 
