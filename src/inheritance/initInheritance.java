@@ -1,11 +1,6 @@
-import inheritance.BaseEmployee;
-import inheritance.CommisionEmployee;
-import inheritance.Employee;
-import inheritance.HourlyEmployee;
-import inheritance.SalariedEmployee;
+package inheritance;
 
-public class init_inheritance {
-
+public class initInheritance {
 	public static void main(String[] args) {
 		Employee[] employees = {
 			new SalariedEmployee("Joe", "Jones", "111-11-1111", 2500),
