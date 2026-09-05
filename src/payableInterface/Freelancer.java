@@ -41,7 +41,7 @@ public class Freelancer implements Payable {
     // Mutators
 	public void setFirstName(String firstName) {
 		if (firstName == null || firstName.isEmpty()) {
-			System.out.println("First name cannot be blank");
+			System.err.println("First name cannot be blank");
 			return;
 		}
 
@@ -50,7 +50,7 @@ public class Freelancer implements Payable {
 
 	public void setLastName(String lastName) {
 		if (lastName == null || lastName.isEmpty()) {
-			System.out.println("Last name cannot be blank");
+			System.err.println("Last name cannot be blank");
 			return;
 		}
 
@@ -59,7 +59,7 @@ public class Freelancer implements Payable {
 
 	public void setHourlyRate(double hourlyRate) {
 		if (hourlyRate < 0) {
-			System.out.println("Hourly rate cannot be negative");
+			System.err.println("Hourly rate cannot be negative");
 			return;
 		}
 
@@ -68,7 +68,7 @@ public class Freelancer implements Payable {
 
 	public void setWorkHours(double workHours) {
 		if (workHours < 0) {
-			System.out.println("Work hours cannot be negative");
+			System.err.println("Work hours cannot be negative");
 			return;
 		}
 

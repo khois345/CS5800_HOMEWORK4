@@ -35,7 +35,7 @@ public class VendorInvoice implements Payable {
 	// Mutators
 	public void setVendorName(String vendorName) {
 		if (vendorName == null || vendorName.isEmpty()) {
-			System.out.println("Vendor name cannot be blank");
+			System.err.println("Vendor name cannot be blank");
 			return;
 		}
 
@@ -44,7 +44,7 @@ public class VendorInvoice implements Payable {
 
 	public void setInvoiceNumber(String invoiceNumber) {
 		if (invoiceNumber == null || invoiceNumber.isEmpty()) {
-			System.out.println("Invoice number cannot be blank");
+			System.err.println("Invoice number cannot be blank");
 			return;
 		}
 
@@ -53,7 +53,7 @@ public class VendorInvoice implements Payable {
 
 	public void setDueAmount(double dueAmount) {
 		if (dueAmount < 0) {
-			System.out.println("Amount due cannot be negative");
+			System.err.println("Amount due cannot be negative");
 			return;
 		}
 
