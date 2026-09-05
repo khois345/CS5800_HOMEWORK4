@@ -1,7 +1,5 @@
 package inheritance;
 
-
-
 public class SalariedEmployee extends Employee {
     private double weeklySalary;
 
