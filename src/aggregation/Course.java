@@ -2,14 +2,14 @@ package aggregation;
 
 public class Course {
 	private String courseName;
-	private Instructor instructor;
-	private Textbook textbook;
+	private Instructor[] instructors;
+	private Textbook[] textbooks;
 
 	// Constructor
-	public Course(String courseName, Instructor instructor, Textbook textbook) {
+	public Course(String courseName, Instructor[] instructors, Textbook[] textbooks) {
 		setCourseName(courseName);
-		setInstructor(instructor);
-		setTextbook(textbook);
+		setInstructors(instructors);
+		setTextbooks(textbooks);
 	}
 
 	// Accessors
@@ -17,12 +17,12 @@ public class Course {
 		return courseName;
 	}
 
-	public Instructor getInstructor() {
-		return instructor;
+	public Instructor[] getInstructors() {
+		return instructors;
 	}
 
-	public Textbook getTextbook() {
-		return textbook;
+	public Textbook[] getTextbooks() {
+		return textbooks;
 	}
 
 	// Mutators
@@ -34,29 +34,33 @@ public class Course {
 		this.courseName = courseName;
 	}
 
-	public void setInstructor(Instructor instructor) {
-		if (instructor == null) {
-			System.err.println("Instructor cannot be null");
+	public void setInstructors(Instructor[] instructors) {
+		if (instructors == null) {
+			System.err.println("Instructors cannot be null");
 			return;
 		}
-		this.instructor = instructor;
+		this.instructors = instructors;
 	}
 
-	public void setTextbook(Textbook textbook) {
-		if (textbook == null) {
-			System.err.println("Textbook cannot be null");
+	public void setTextbooks(Textbook[] textbooks) {
+		if (textbooks == null) {
+			System.err.println("Textbooks cannot be null");
 			return;
 		}
-		this.textbook = textbook;
+		this.textbooks = textbooks;
 	}
 
 	// Other functions
 	public void print() {
 		System.out.println("Course name: " + courseName);
-		System.out.println("Instructor: " + instructor.getFirstName() + " "
-				+ instructor.getLastName());
-		System.out.println("Textbook: " + textbook.getTitle() + " by "
-				+ textbook.getAuthor());
+		for (int i = 0; i < instructors.length; i++) {
+			Instructor instructor = instructors[i];
+			System.out.println("Instructor " + (i + 1) + ": " + instructor.getFirstName() + " " + instructor.getLastName());
+		}
+		for (int i = 0; i < textbooks.length; i++) {
+			Textbook textbook = textbooks[i];
+			System.out.println("Textbook " + (i + 1) + ": " + textbook.getTitle() + " by " + textbook.getAuthor());
+		}
 	}
 
 }
