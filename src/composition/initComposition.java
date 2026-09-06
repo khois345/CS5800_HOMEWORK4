@@ -18,7 +18,7 @@ public class initComposition {
 		Folder publicFolder = new Folder("public", new File[] {
 				new File(".htaccess"),
 				new File(".htrouter.php"),
-				new File("index.htm")
+				new File("index.html")
 		}, new Folder[0]);
 
 		Folder[] sourceFileSubFolders = {
